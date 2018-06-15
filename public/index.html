@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset="utf-8">
+    <title>HERO QUEST</title>
+
+    <!-- This is a stylesheet that includes the font you should use: Roboto -->
+    <link href="https://fonts.googleapis.com/css?family=MedievalSharp" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="/style.css" media="screen">
+
+    <!-- This script incorporates SVG icons from Font Awesome: http://fontawesome.com/ -->
+    <script src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" defer></script>
+
+    <script src="/index.js" charset="utf-8" defer></script>
+
+  </head>
+
+  <body style="background:url(https://i.pinimg.com/736x/5f/89/3a/5f893ac6adfa90f0181ed3e9e1e2ab60--d-texture-paint-texture.jpg)">
+
+
+    <header>
+      <!-- The <i> tag below includes the lizzard hand icon from Font Awesome -->
+      <a href="#"><h1 class="site-title">HERO QUEST</h1></a>
+
+    </header>
+
+    <main class="main-container">
+
+    </main>
+
+    <button type="button" id="start-game-button">START</button>
+
+    <div id="modal-backdrop" class="hidden"></div>
+    <div id="start-game-modal" class="hidden">
+      <div class="modal-dialog">
+
+        <div class="modal-header">
+          <h3>NAME YOUR CHARACTER</h3>
+          <button type="button" class="modal-close-button">&times;</button>
+        </div>
+
+        <div class="modal-body">
+          <div class="name-input-element">
+            <label for="name-text-input">NAME:</label>
+            <textarea id="name-text-input"></textarea>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="modal-cancel-button">CANCEL</button>
+          <button type="button" class="modal-begin-button">BEGIN</button>
+        </div>
+      </div>
+	</div>
+
+    <div id="story-modal-1" class="hidden story-modal">
+      <div class="modal-dialog">
+
+        <div class="modal-header">
+          <h3>THE HERO WE NEED</h3>
+          <button type="button" class="modal-close-button" id="cb1">&times;</button>
+        </div>
+
+        <div class="modal-body">
+          <p>YOU ARE A NEW ADVENTURER ON A QUEST AWAY FROM YOUR HOME VILLAGE. IN THE SMALL TOWN OF BRETHERTON, YOU STOP AT A TAVERN FOR SOME MUCH NEEDED FOOD AND REST. YOU PLAN TO SPEND A NIGHT THERE AFTER FINISHING YOUR SUPPER. SUDDENLY, A COMMOTION BURSTS THROUGH THE DOOR.</p>
+
+	  <p>A RAGGED FARMER SEEKS AID. HE EXCLAIMS THAT A GROUP OF MEN RAIDED HIS CART THAT HAD MOST OF HIS FOOD, MONEY, AND PERSONAL BELONGINGS. WHAT DO YOU DO?</p>
+
+	<p>A. GO WITH THE FARMER</p>
+	<p>B. STAY AT THE TAVERN</p>
+	
+	</div>
+
+        <div class="modal-footer">
+          <button type="button" class="modal-option-button" id="a1">A</button>
+          <button type="button" class="modal-option-button" id="b1">B</button>
+        </div>
+      </div>
+    </div>
+
+<div id="story-modal-2" class="hidden story-modal">
+      <div class="modal-dialog">
+
+        <div class="modal-header">
+          <h3>THE CART</h3>
+          <button type="button" class="modal-close-button" id="cb2">&times;</button>
+        </div>
+
+        <div class="modal-body">
+          <p>YOU AND THE FARMER FIND THE BANDITS WITH FULL ARMS AND  HEAVY POCKETS, PREPARING TO LEAVE THE SCENE OF THE CRIME. THERE ARE THREE OF THEM, EACH MORE BRUTISH THAN THE LAST. THE FARMER SUBTLY COWERS AWAY. YOUR HAND WARILY HOVERS THE HILT OF YOUR SWORD. YOU MUST ACT BEFORE THE BANDITS GATHER THEIR WITS AS A GROUP. WHAT DO YOU DO?</p>
+
+        <p>A. TRY TO FIGHT</p>
+        <p>B. TRY TO SMOOTH-TALK</p>
+        <p>C. TRY TO INTIMIDATE</p>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="modal-option-button" id="a2">A</button>
+          <button type="button" class="modal-option-button" id="b2">B</button>
+          <button type="button" class="modal-option-button" id="c2">C</button>
+        </div>
+      </div>
+    </div>
+
+<div id="story-modal-3" class="hidden story-modal">
+      <div class="modal-dialog">
+
+        <div class="modal-header">
+          <h3>WHAT A PITY</h3>
+          <button type="button" class="modal-close-button" id="cb3">&times;</button>
+        </div>
+
+        <div class="modal-body">
+          <p>IN THE FACE OF HARDSHIP, YOU FAIL TO RISE TO THE OCCASION. NOT EVERYONE CAN BE A HERO, IT WOULD SEEM.</p>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="modal-option-button" id="a3">DONE</button>
+        </div>
+      </div>
+    </div>
+
+<div id="story-modal-4" class="hidden story-modal">
+      <div class="modal-dialog">
+
+        <div class="modal-header">
+          <h3>AN UNFAIR FIGHT</h3>
+          <button type="button" class="modal-close-button" id="cb4">&times;</button>
+        </div>
+
+        <div class="modal-body">
+          <p>THE BANDITS ATTACK FIRST. THEY HAVE NUMBERS ADVANTAGE. TAKE ACTION.</p>
+
+        <p>A. PROTECT THE FARMER</p>
+        <p>B. GO ON THE OFFENSIVE</p>
+        <p>C. RUN AWAY</p>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="modal-option-button" id="a4">A</button>
+          <button type="button" class="modal-option-button" id="b4">B</button>
+          <button type="button" class="modal-option-button" id="c4">C</button>
+        </div>
+      </div>
+    </div>
+
+<div id="story-modal-5" class="hidden story-modal">
+      <div class="modal-dialog">
+
+        <div class="modal-header">
+          <h3>A TRAGIC FINALE</h3>
+          <button type="button" class="modal-close-button" id="cb5">&times;</button>
+        </div>
+
+        <div class="modal-body">
+          <p>THE BATTLE WAS LONG AND DIFFICULT. YOU SUSTAINED MULTIPLE DANGEROUS WOUNDS. THE FARMER WAS SLAIN IN THE CHAOS, AND LYING WITH HIM NOW ARE THE BODIES OF THE THREE BANDITS. THIS IS NOT QUITE WHAT YOU IMAGINED HEROISM TO BE.</p>
+
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="modal-option-button" id="a5">DONE</button>
+        </div>
+      </div>
+    </div>
+
+<div id="story-modal-6" class="hidden story-modal">
+      <div class="modal-dialog">
+
+        <div class="modal-header">
+          <h3>ARE YOU SATISFIED?</h3>
+          <button type="button" class="modal-close-button" id="cb6">&times;</button>
+        </div>
+
+        <div class="modal-body">
+          <p>YOU SUCCESSFULLY DEFEND THE FARMER FROM THE BANDITS, SLAYING ONE AND SENDING THE OTHERS PACKIKNG WITH INJURY. MANY OF THE FARMER'S BELONGINGS HAVE BEEN RECOVERED, BUT THEY ESCAPED WITH ALL OF THE GOLD. THE FARMER HAS NO REWARD BUT HIS THANKS. WHAT COMES NEXT?</p>
+
+        <p>A. GO BACK TO THE TAVERN</p>
+        <p>B. CHASE AFTER THE BANDITS</p>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="modal-option-button" id="a6">A</button>
+          <button type="button" class="modal-option-button" id="b6">B</button>
+        </div>
+      </div>
+    </div>
+
+<div id="story-modal-7" class="hidden story-modal">
+      <div class="modal-dialog">
+
+        <div class="modal-header">
+          <h3>AND STAY OUT</h3>
+          <button type="button" class="modal-close-button" id="cb7">&times;</button>
+        </div>
+
+        <div class="modal-body">
+          <p>YOU MAKE YOURSELF APPEAR AS LARGE AND DANGEROUS AS POSSIBLE. UNSHEATING YOUR SWORD, YOU KEEP SAFE DISTANCE AND CALMY WARN THE BANDITS TO LEAVE. SENSING THE COOL DEMEANOR OF THE NEWCOMER, THE BANDITS REALIZE THAT IT IS IN THEIR BEST INTEREST TO LISTEN. THEY KEEP ONLY WHAT IS ALREADY IN THEIR POCKETS, TURN TAIL AND RUN.</p>
+        </div>
+
+        <div class="modal-footer">
+	<button type="button" class="modal-option-button" id="a7">DONE</button>
+        </div> 
+      </div>
+    </div>
+
+<div id="story-modal-8" class="hidden story-modal">
+      <div class="modal-dialog">
+
+        <div class="modal-header">
+          <h3>THE MYSTERIOUS LAIR</h3>
+          <button type="button" class="modal-close-button" id="cb8">&times;</button>
+        </div>
+
+        <div class="modal-body">
+	<p>YOU TRACK THE BANDITS USING A FAINT BLOOD TRAIL FROM THEIR INJURIES. NEAR THE BOTTOM OF A CLIFF FACE, THE TRAIL ABRUPTLY ENDS. YOU PATIENTLY HIDE NEARBY, AND AFTER A COUPLE OF HOURS A HIDDEN DOORWAY OPENS OUT OF THE WALL, LETTING A GROUP OF MEN OUT. IT APPEARS TO BE SOME KIND OF BANDIT LAIR. WHAT IS YOUR MOVE?</p>
+
+        <p>A. CHARGE INTO THE CAMP WITH YOUR SWORD DRAWN</p>
+        <p>B. INVESTIGATE THE SURROUNDING AREA AND LOOK FOR A WAY IN</p>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="modal-option-button" id="a8">A</button>
+          <button type="button" class="modal-option-button" id="b8">B</button>
+        </div>
+      </div>
+    </div>
+
+<div id="story-modal-9" class="hidden story-modal">
+      <div class="modal-dialog">
+
+        <div class="modal-header">
+          <h3>A BOLD MOVE</h3>
+          <button type="button" class="modal-close-button" id="cb9">&times;</button>
+        </div>
+
+        <div class="modal-body">
+	<p>BLURRING THE LINES BETWEEN HEROISM, BOLDNESS, AND STUPIDITY, YOU CHARGE INTO THE UNKNOWN. THIS WAS A BIGGER OPERATION THAN YOU IMAGINED, AND YOU ARE OVERWHELEMED BY YOUR ENEMIES.</p>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="modal-option-button" id="a9">DONE</button>
+        </div>
+      </div>
+    </div>
+
+<div id="story-modal-10" class="hidden story-modal">
+      <div class="modal-dialog">
+
+        <div class="modal-header">
+          <h3>SMOKE AND MIRRORS</h3>
+          <button type="button" class="modal-close-button" id="cb10">&times;</button>
+        </div>
+
+        <div class="modal-body">
+	<p>YOU EXPLORE THE SURROUNDING AREA. YOU FIND AN ISOLATED SCOUT AND FORCE HIM TO RELINQUISH HIS CLOTHING, INCLUDING AN INSIGNIA SPECIFIC TO THE APPARENT GANG ACTIVITY. SWAPPING HIS CLOTHING FOR YOUR OWN, YOU LURK NEARBY FOR THE NEXT PATROL TO LEAVE THE CAMP AND SNEAK INSIDE. YOU ARE ABLE TO MOVE THROUGHOUT THE CAMP COMPLETELY UNNOTICED. AFTER A SHORT WHILE, YOU LOCATE THE LEADER'S QUARTERS. WITH YOUR HEART RACING, YOU UNSHEATE YOUR SWORD AND HOLD IT TO THE BANDIT LORD'S BACK.</p>
+
+        <p>A. KILL HIM</p>
+        <p>B. BARGAIN FOR THE FARMER'S BELONGINGS</p>
+        <p>C. EXTORT HIM FOR GOLD</p>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="modal-option-button" id="a10">A</button>
+          <button type="button" class="modal-option-button" id="b10">B</button>
+          <button type="button" class="modal-option-button" id="c10">C</button>
+        </div>
+      </div>
+    </div>
+
+<div id="story-modal-11" class="hidden story-modal">
+      <div class="modal-dialog">
+
+        <div class="modal-header">
+          <h3>SOUND THE BELLS</h3>
+          <button type="button" class="modal-close-button" id="cb11">&times;</button>
+        </div>
+
+        <div class="modal-body">
+	<p>WITH HIS DYING BREATH, THE BANDIT LEADER TRIGGERS AN ALARM. WITH INTENSE UPROAR, THE BANDITS THUNDER TOWARD THEIR LEADER'S QUARTERS. YOUR FATE IS SEALED. YOU STAND AT THE READY IN THE DOORWAY.</p>	
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="modal-option-button" id="a11">DONE</button>
+        </div>
+      </div>
+    </div>
+
+<div id="story-modal-12" class="hidden story-modal">
+      <div class="modal-dialog">
+
+        <div class="modal-header">
+          <h3>A SATISFYING MEAL</h3>
+          <button type="button" class="modal-close-button" id="cb12">&times;</button>
+        </div>
+
+        <div class="modal-body">
+	<p>THE BANDIT LEADER, WITHOUT MUCH CHOICE, TELLS YOU WHERE THE STORAGE AREA IS SO THAT YOU CAN RETRIEVE THE FARMER'S GOODS. YOU LEAVE WITH ALL OF THE FARMER'S GOLD (AND SOME EXTRA FOR YOURSELF OF COURSE). UPON RETURNING TO THE TOWN, YOU RETURN THE FARMER'S GOODS AND HEAD FOR THE TAVERN. AFTER A LONG DAY, THERE IS NOTHING LIKE WARM FOOD AND COLD DRINK. JUST ANOTHER DAY FOR A HERO.</p>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="modal-option-button" id="a12">DONE</button>
+        </div>
+      </div>
+    </div>
+
+<div id="story-modal-13" class="hidden story-modal">
+      <div class="modal-dialog">
+
+        <div class="modal-header">
+          <h3>A LIFTIME OF RICHES</h3>
+          <button type="button" class="modal-close-button" id="cb13">&times;</button>
+        </div>
+
+        <div class="modal-body">
+	<p>WITH HIS LIFE ON THE LINE, THE BANDIT LORD EVENTUALLY MUST GIVE IN TO YOUR MONETARY DEMANDS. YOU WALK HIM AT SWORDPOINT TO A VAULT, WHICH HE UNLOCKS. YOU FORCE HIM TO STUFF YOUR PACK WITH ALL OF THE GOLD THAT CAN FEASIBLY FIT. ONCE COMPLETE, YOU WALK THE LEADER BACK TOWARD THE DUNGEON ENTRANCE. ONCE YOU RECOGNIZE YOUR ENVIRONMENT, YOU LEAVE HIM BEHIND AND MAKE A DASH FOR THE EXIT.</p>
+
+	<p>FROM YOUR FIRST QUEST, YOU MANAGED TO OBTAIN A LIFETIME-WORTH OF RICHES. ONCE BACK IN THE TOWN, YOU SPEAK NOTHING OF YOUR NEWFOUND WEALTH. YOU LEAVE A SMALL POUCH OF GOLD ON THE FARMER'S DOORSTEP AND HEAD TO THE TAVERN TO ENJOY THE CHEAPEST PINT OF YOUR LIFE.</p>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="modal-option-button" id="a13">DONE</button>
+        </div>
+      </div>
+    </div>
+
+<div id="story-modal-14" class="hidden story-modal">
+      <div class="modal-dialog">
+
+        <div class="modal-header">
+          <h3>BACK TO THE QUIET LIFE</h3>
+          <button type="button" class="modal-close-button" id="cb14">&times;</button>
+        </div>
+
+        <div class="modal-body">
+	<p>THIS CLOSE BRUSH WITH DEATH LEFT YOU WITH NO FURTHER DESIRE FOR BLOODSHED. YOUR ADVENTUROUS THIRST HAS BEEN QUENCHED, AND NOW YOUR LITERAL THIRST AS YOU DWELL ON THESE EVENTS OVER A BEER AT THE TAVERN'S MAIN BAR. </p>
+	</div>
+
+        <div class="modal-footer">
+          <button type="button" class="modal-option-button" id="a14">DONE</button>
+        </div>
+      </div>
+    </div>
+
+
+  </body>
+
+</html> 
